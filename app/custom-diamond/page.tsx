@@ -1,0 +1,1 @@
+import Editorial from '../../components/Editorial'; import {DiamondProcess} from '../../components/DiamondProcess'; export default function Custom(){return <div className="container py-24 max-w-5xl"><Editorial title="Custom diamonds"/><DiamondProcess/></div>}

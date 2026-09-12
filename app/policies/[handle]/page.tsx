@@ -1,0 +1,2 @@
+import {getPolicy} from '../../../lib/shopify'; import Editorial from '../../../components/Editorial';
+export default async function Policy({params}:{params:{handle:string}}){const policy=await getPolicy(params.handle);return policy?<div className="container py-24 max-w-4xl"><p className="eyebrow">Legal</p><h1 className="text-6xl mt-4">{policy.title}</h1><div className="mt-10 leading-relaxed" dangerouslySetInnerHTML={{__html:policy.body}}/></div>:<Editorial title={params.handle.replaceAll('-',' ')}>This policy is not currently available from the Shopify store.</Editorial>}

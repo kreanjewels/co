@@ -1,0 +1,2 @@
+import {getCollection} from '../../../lib/shopify';
+export default async function Collection({params}:{params:{handle:string}}){const c=await getCollection(params.handle);return <div className="container py-20"><p className="eyebrow">Collection</p><h1 className="text-6xl mt-3">{c?.title??'Collection unavailable'}</h1>{c?<p className="mt-8">{c.description}</p>:<p className="mt-8 border p-8">This collection could not be found in Shopify.</p>}</div>}
